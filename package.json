@@ -12,7 +12,6 @@
     "deploy": "touch dist/.nojekyll && gh-pages -d dist -t true"
   },
   "dependencies": {
-    "@faker-js/faker": "^8.4.1",
     "lesca-click": "^4.3.5",
     "lesca-fetcher": "^1.1.7",
     "lesca-react-onload": "^1.0.17",
@@ -35,7 +34,6 @@
     "eslint-plugin-react-refresh": "^0.4.7",
     "gh-pages": "^6.1.1",
     "less": "^4.2.0",
-    "msw": "^2.3.0",
     "postcss": "^8.4.38",
     "prettier-plugin-tailwindcss": "^0.5.14",
     "tailwind-merge": "^2.3.0",
@@ -43,8 +41,5 @@
     "typescript": "^5.4.5",
     "vite": "^5.2.11",
     "vite-plugin-html": "^3.2.2"
-  },
-  "msw": {
-    "workerDirectory": "public"
   }
 }
