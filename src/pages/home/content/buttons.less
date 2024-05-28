@@ -1,0 +1,288 @@
+@desktop: 1920;
+@mobile: 540;
+
+.Buttons {
+  @apply absolute top-0 h-full w-full;
+
+  .d {
+    @apply relative left-0 top-0 h-full w-full;
+
+    & > div {
+      @apply absolute;
+
+      &::before {
+        content: '';
+        @apply block w-full bg-cover bg-center bg-no-repeat;
+      }
+
+      &::after {
+        content: '';
+        @apply absolute bg-bottom bg-no-repeat;
+      }
+    }
+
+    .c-0 {
+      top: 70.1%;
+      left: 39.3%;
+      width: @width / @desktop * 100%;
+
+      @width: 157.3807;
+
+      &::before {
+        padding-bottom: (unit(image-height(@img) / unit(image-width(@img))) * 100%);
+        background-image: url(@img);
+
+        @img: './img/buttons/c-0.svg';
+      }
+
+      @apply cursor-pointer;
+    }
+
+    .c-1 {
+      top: 71.6%;
+      left: 46.3%;
+      width: @width / @desktop * 100%;
+
+      @width: 37.3762;
+
+      &::before {
+        padding-bottom: (unit(image-height(@img) / unit(image-width(@img))) * 100%);
+        background-image: url(@img);
+
+        @img: './img/buttons/c-1.svg';
+      }
+    }
+
+    .c-2 {
+      top: 80.5%;
+      left: 72.2%;
+      width: @width / @desktop * 100%;
+
+      @width: 157.3807;
+
+      &::before {
+        padding-bottom: (unit(image-height(@img) / unit(image-width(@img))) * 100%);
+        background-image: url(@img);
+
+        @img: './img/buttons/c-0.svg';
+      }
+
+      @apply cursor-pointer;
+    }
+
+    .c-3 {
+      top: 80.5% + 1.5%;
+      left: 72.2% + 7%;
+      width: @width / @desktop * 100%;
+
+      @width: 37.3762;
+
+      &::before {
+        padding-bottom: (unit(image-height(@img) / unit(image-width(@img))) * 100%);
+        background-image: url(@img);
+
+        @img: './img/buttons/c-1.svg';
+      }
+    }
+
+    .c-4 {
+      top: 93.1%;
+      left: 30.7%;
+      width: @width / @desktop * 100%;
+
+      @width: 362.0557;
+
+      @apply cursor-pointer;
+
+      &::before {
+        padding-bottom: (unit(image-height(@img) / unit(image-width(@img))) * 100%);
+        background-image: url(@img);
+
+        @img: './img/buttons/c-4.svg';
+      }
+
+      &::after {
+        bottom: 69.2%;
+        margin-left: 0 - (@w / @width * 100%)/ 2 - @offset;
+        padding-bottom: (unit(image-height(@img) / unit(image-width(@img))) * 100%);
+        width: @w / @width * 100%;
+        background-image: url(@img);
+
+        @w: 200;
+        @offset: 10%;
+        @img: './img/buttons/c-4-f.svg';
+        @apply left-1/2 bg-contain;
+      }
+    }
+
+    .c-5 {
+      top: 93.6%;
+      left: 50.3%;
+      width: @width / @desktop * 100%;
+
+      @width: 369.8335;
+
+      @apply cursor-pointer;
+
+      &::before {
+        padding-bottom: (unit(image-height(@img) / unit(image-width(@img))) * 100%);
+        background-image: url(@img);
+
+        @img: './img/buttons/c-5.svg';
+      }
+
+      &::after {
+        bottom: 91.4%;
+        margin-left: 0 - (@w / @width * 100%)/ 2 - @offset;
+        padding-bottom: (unit(image-height(@img) / unit(image-width(@img))) * 100%);
+        width: @w / @width * 100%;
+        background-image: url(@img);
+
+        @w: 200;
+        @offset: -13%;
+        @img: './img/buttons/c-5-f.svg';
+        @apply left-1/2 bg-contain;
+      }
+    }
+  }
+
+  .m {
+    & > div {
+      @apply absolute;
+
+      &::before {
+        content: '';
+        @apply block w-full bg-cover bg-center bg-no-repeat;
+      }
+
+      &::after {
+        content: '';
+        @apply absolute bg-bottom bg-no-repeat;
+      }
+    }
+
+    .c-0 {
+      top: 69.8%;
+      left: 39.4%;
+      width: @width / @mobile * 100%;
+
+      @width: 90.7185;
+
+      &::before {
+        padding-bottom: (unit(image-height(@img) / unit(image-width(@img))) * 100%);
+        background-image: url(@img);
+
+        @img: './img/buttons/c-0.svg';
+      }
+
+      @apply cursor-pointer;
+    }
+
+    .c-1 {
+      top: 69.8% + 0.9%;
+      left: 38.2% + 15.5%;
+      width: @width / @mobile * 100%;
+
+      @width: 21.5447;
+
+      &::before {
+        padding-bottom: (unit(image-height(@img) / unit(image-width(@img))) * 100%);
+        background-image: url(@img);
+
+        @img: './img/buttons/c-1.svg';
+      }
+    }
+
+    .c-2 {
+      top: 85.1%;
+      left: 68.7%;
+      width: @width / @mobile * 100%;
+
+      @width: 90.7185;
+
+      &::before {
+        padding-bottom: (unit(image-height(@img) / unit(image-width(@img))) * 100%);
+        background-image: url(@img);
+
+        @img: './img/buttons/c-0.svg';
+      }
+
+      @apply cursor-pointer;
+    }
+
+    .c-3 {
+      top: 85.1% + 0.9%;
+      left: 68.7% + 15.5%;
+      width: @width / @mobile * 100%;
+
+      @width: 21.5447;
+
+      &::before {
+        padding-bottom: (unit(image-height(@img) / unit(image-width(@img))) * 100%);
+        background-image: url(@img);
+
+        @img: './img/buttons/c-1.svg';
+      }
+    }
+
+    .c-4 {
+      top: 91.7%;
+      left: 31.7%;
+      width: @width / @mobile * 100%;
+
+      @width: 225.2615;
+
+      @apply cursor-pointer;
+
+      &::before {
+        padding-bottom: (unit(image-height(@img) / unit(image-width(@img))) * 100%);
+        background-image: url(@img);
+
+        @img: './img/buttons/m-c-4.svg';
+      }
+
+      &::after {
+        bottom: -91.8%;
+        margin-left: -103.276292%;
+        padding-bottom: (unit(image-height(@img) / unit(image-width(@img))) * 100%);
+        width: @w / @width * 100%;
+        background-image: url(@img);
+
+        @w: 127.3912;
+        @offset: 10%;
+        @img: './img/buttons/c-4-f.svg';
+        @apply left-1/2 bg-contain;
+      }
+    }
+
+    .c-5 {
+      top: 95.3%;
+      left: 47.2%;
+      width: @width / @mobile * 100%;
+
+      @width: 235.5677;
+
+      @apply cursor-pointer;
+
+      &::before {
+        padding-bottom: (unit(image-height(@img) / unit(image-width(@img))) * 100%);
+        background-image: url(@img);
+
+        @img: './img/buttons/c-5.svg';
+      }
+
+      &::after {
+        bottom: -38.6%;
+        margin-left: -100.139191%;
+        padding-bottom: (unit(image-height(@img) / unit(image-width(@img))) * 100%);
+        width: @w / @width * 100%;
+        background-image: url(@img);
+
+        @w: 127.3912;
+        @offset: -13%;
+        @img: './img/buttons/m-c-5-f.svg';
+        @apply left-1/2 bg-contain;
+      }
+    }
+  }
+}

@@ -1,0 +1,503 @@
+@desktop: 1920;
+@mobile: 540;
+
+.Character {
+  @apply absolute top-0 h-full w-full;
+
+  .d {
+    @apply relative left-0 top-0 h-full w-full;
+
+    & > div {
+      @apply absolute;
+
+      &::before {
+        content: '';
+        @apply block w-full bg-cover bg-center bg-no-repeat;
+      }
+
+      &::after {
+        content: '';
+        @apply absolute bg-bottom bg-no-repeat;
+      }
+    }
+
+    .c-0 {
+      top: 1.6%;
+      left: 77%;
+      width: @width / @desktop * 100%;
+
+      @width: 357.1449;
+
+      &::before {
+        padding-bottom: (unit(image-height(@img) / unit(image-width(@img))) * 100%);
+        background-image: url(@img);
+
+        @img: './img/character/c-0.svg';
+      }
+
+      &::after {
+        bottom: -83%;
+        margin-left: 0 - (@w / @width * 100%)/ 2 - @offset;
+        padding-bottom: (unit(image-height(@img) / unit(image-width(@img))) * 100%);
+        width: @w / @width * 100%;
+        background-image: url(@img);
+
+        @w: 45.0158;
+        @offset: -45%;
+        @img: './img/character/c-0-f.svg';
+        @apply left-1/2 bg-contain;
+      }
+    }
+
+    .c-1 {
+      top: 5.1%;
+      left: 46%;
+      width: @width / @desktop * 100%;
+
+      @width: 173.1817;
+
+      &::before {
+        padding-bottom: (unit(image-height(@img) / unit(image-width(@img))) * 100%);
+        background-image: url(@img);
+
+        @img: './img/character/c-1.svg';
+      }
+    }
+
+    .c-2 {
+      top: 8.4%;
+      left: 21.8%;
+      width: @width / @desktop * 100%;
+
+      @width: 363.7349;
+
+      &::before {
+        padding-bottom: (unit(image-height(@img) / unit(image-width(@img))) * 100%);
+        background-image: url(@img);
+
+        @img: './img/character/c-2.svg';
+      }
+    }
+
+    .c-3 {
+      top: 16.4%;
+      left: 9.3%;
+      width: @width / @desktop * 100%;
+
+      @width: 161.9334;
+
+      &::before {
+        padding-bottom: (unit(image-height(@img) / unit(image-width(@img))) * 100%);
+        background-image: url(@img);
+
+        @img: './img/character/c-3.svg';
+      }
+    }
+
+    .c-4 {
+      top: 25.2%;
+      left: 12.3%;
+      width: @width / @desktop * 100%;
+
+      @width: 220.4713;
+
+      &::before {
+        padding-bottom: (unit(image-height(@img) / unit(image-width(@img))) * 100%);
+        background-image: url(@img);
+
+        @img: './img/character/c-4.svg';
+      }
+    }
+
+    .c-5 {
+      top: 18.9%;
+      left: 90.8%;
+      width: @width / @desktop * 100%;
+
+      @width: 135.372;
+
+      &::before {
+        padding-bottom: (unit(image-height(@img) / unit(image-width(@img))) * 100%);
+        background-image: url(@img);
+
+        @img: './img/character/c-5.svg';
+      }
+    }
+
+    .c-6 {
+      top: 23.9%;
+      left: 80.8%;
+      width: @width / @desktop * 100%;
+
+      @width: 156.115;
+
+      &::before {
+        padding-bottom: (unit(image-height(@img) / unit(image-width(@img))) * 100%);
+        background-image: url(@img);
+
+        @img: './img/character/c-6.svg';
+      }
+    }
+
+    .c-7 {
+      top: 25%;
+      left: 72.8%;
+      width: @width / @desktop * 100%;
+
+      @width: 166.6441;
+
+      &::before {
+        padding-bottom: (unit(image-height(@img) / unit(image-width(@img))) * 100%);
+        background-image: url(@img);
+
+        @img: './img/character/c-7.svg';
+      }
+    }
+
+    .c-8 {
+      top: 25.2%;
+      left: 62.8%;
+      width: @width / @desktop * 100%;
+
+      @width: 159.8212;
+
+      &::before {
+        padding-bottom: (unit(image-height(@img) / unit(image-width(@img))) * 100%);
+        background-image: url(@img);
+
+        @img: './img/character/c-8.svg';
+      }
+    }
+
+    .c-9 {
+      top: 45.6%;
+      left: 70.9%;
+      width: @width / @desktop * 100%;
+
+      @width: 206.6079;
+
+      &::before {
+        padding-bottom: (unit(image-height(@img) / unit(image-width(@img))) * 100%);
+        background-image: url(@img);
+
+        @img: './img/character/c-9.svg';
+      }
+    }
+
+    .c-10 {
+      top: 49.2%;
+      left: 13.6%;
+      width: @width / @desktop * 100%;
+
+      @width: 87.7411;
+
+      &::before {
+        padding-bottom: (unit(image-height(@img) / unit(image-width(@img))) * 100%);
+        background-image: url(@img);
+
+        @img: './img/character/c-10.svg';
+      }
+    }
+
+    .c-11 {
+      top: 49.4%;
+      left: 19.6%;
+      width: @width / @desktop * 100%;
+
+      @width: 97.4774;
+
+      &::before {
+        padding-bottom: (unit(image-height(@img) / unit(image-width(@img))) * 100%);
+        background-image: url(@img);
+
+        @img: './img/character/c-11.svg';
+      }
+    }
+
+    .c-12 {
+      top: 49.4%;
+      left: 26.2%;
+      width: @width / @desktop * 100%;
+
+      @width: 77.7987;
+
+      &::before {
+        padding-bottom: (unit(image-height(@img) / unit(image-width(@img))) * 100%);
+        background-image: url(@img);
+
+        @img: './img/character/c-12.svg';
+      }
+    }
+
+    .c-13 {
+      top: 57.8%;
+      left: 66.1%;
+      width: @width / @desktop * 100%;
+
+      @width: 204.4205;
+
+      &::before {
+        padding-bottom: (unit(image-height(@img) / unit(image-width(@img))) * 100%);
+        background-image: url(@img);
+
+        @img: './img/character/c-13.svg';
+      }
+    }
+
+    .c-14 {
+      top: 66.8%;
+      left: 75.1%;
+      width: @width / @desktop * 100%;
+
+      @width: 423.7762;
+
+      &::before {
+        padding-bottom: (unit(image-height(@img) / unit(image-width(@img))) * 100%);
+        background-image: url(@img);
+
+        @img: './img/character/c-14.svg';
+      }
+    }
+
+    .c-15 {
+      top: 64%;
+      left: 74.6%;
+      width: @width / @desktop * 100%;
+
+      @width: 335.4944;
+
+      &::before {
+        padding-bottom: (unit(image-height(@img) / unit(image-width(@img))) * 100%);
+        background-image: url(@img);
+
+        @img: './img/character/c-15.svg';
+
+        @apply mix-blend-plus-darker;
+      }
+
+      &::after {
+        bottom: 37.6%;
+        margin-left: 0 - (@w / @width * 100%)/ 2 - @offset;
+        padding-bottom: (unit(image-height(@img) / unit(image-width(@img))) * 100%);
+        width: @w / @width * 100%;
+        background-image: url(@img);
+
+        @w: 98.8604;
+        @offset: -4%;
+        @img: './img/character/c-15-f.svg';
+        @apply left-1/2 bg-contain;
+      }
+    }
+
+    .c-16 {
+      top: 69%;
+      left: 3.7%;
+      width: @width / @desktop * 100%;
+
+      @width: 299.125;
+
+      &::before {
+        padding-bottom: (unit(image-height(@img) / unit(image-width(@img))) * 100%);
+        background-image: url(@img);
+
+        @img: './img/character/c-16.svg';
+      }
+    }
+
+    .c-17 {
+      top: 86.9%;
+      left: 12.1%;
+      width: @width / @desktop * 100%;
+
+      @width: 360.385;
+
+      &::before {
+        padding-bottom: (unit(image-height(@img) / unit(image-width(@img))) * 100%);
+        background-image: url(@img);
+
+        @img: './img/character/c-17.svg';
+      }
+    }
+
+    .c-18 {
+      top: 86%;
+      left: 79.1%;
+      width: @width / @desktop * 100%;
+
+      @width: 298.8169;
+
+      &::before {
+        padding-bottom: (unit(image-height(@img) / unit(image-width(@img))) * 100%);
+        background-image: url(@img);
+
+        @img: './img/character/c-18.svg';
+      }
+    }
+
+    .c-19 {
+      top: 75.3%;
+      left: 28.2%;
+      width: @width / @desktop * 100%;
+
+      @width: 300.1159;
+
+      &::before {
+        padding-bottom: (unit(image-height(@img) / unit(image-width(@img))) * 100%);
+        background-image: url(@img);
+
+        @img: './img/character/c-19.svg';
+      }
+    }
+  }
+
+  .m {
+    & > div {
+      @apply absolute;
+
+      &::before {
+        content: '';
+        @apply block w-full bg-cover bg-center bg-no-repeat;
+      }
+
+      &::after {
+        content: '';
+        @apply absolute bg-bottom bg-no-repeat;
+      }
+    }
+
+    .c-0 {
+      top: 3.7%;
+      left: 34.5%;
+      width: @width / @mobile * 100%;
+
+      @width: 101.8621;
+
+      &::before {
+        padding-bottom: (unit(image-height(@img) / unit(image-width(@img))) * 100%);
+        background-image: url(@img);
+
+        @img: './img/character/m-c-0.svg';
+      }
+    }
+
+    .c-1 {
+      top: 23.2%;
+      left: 71.8%;
+      width: @width / @mobile * 100%;
+
+      @width: 96.1269;
+
+      &::before {
+        padding-bottom: (unit(image-height(@img) / unit(image-width(@img))) * 100%);
+        background-image: url(@img);
+
+        @img: './img/character/m-c-1.svg';
+      }
+    }
+
+    .c-2 {
+      top: 23.3%;
+      left: 53.8%;
+      width: @width / @mobile * 100%;
+
+      @width: 92.1912;
+
+      &::before {
+        padding-bottom: (unit(image-height(@img) / unit(image-width(@img))) * 100%);
+        background-image: url(@img);
+
+        @img: './img/character/m-c-2.svg';
+      }
+    }
+
+    .c-3 {
+      top: 55.5%;
+      left: 3.4%;
+      width: @width / @mobile * 100%;
+
+      @width: 50.5763;
+
+      &::before {
+        padding-bottom: (unit(image-height(@img) / unit(image-width(@img))) * 100%);
+        background-image: url(@img);
+
+        @img: './img/character/m-c-3.svg';
+      }
+    }
+
+    .c-4 {
+      top: 55.7%;
+      left: 14.7%;
+      width: @width / @mobile * 100%;
+
+      @width: 56.1886;
+
+      &::before {
+        padding-bottom: (unit(image-height(@img) / unit(image-width(@img))) * 100%);
+        background-image: url(@img);
+
+        @img: './img/character/m-c-4.svg';
+      }
+    }
+
+    .c-5 {
+      top: 72.5%;
+      left: 9.7%;
+      width: @width / @mobile * 100%;
+
+      @width: 244.276;
+
+      &::before {
+        padding-bottom: (unit(image-height(@img) / unit(image-width(@img))) * 100%);
+        background-image: url(@img);
+
+        @img: './img/character/m-c-5.svg';
+      }
+    }
+
+    .c-6 {
+      top: 70.6%;
+      left: 8.8%;
+      width: @width / @mobile * 100%;
+
+      @width: 193.388;
+
+      &::before {
+        padding-bottom: (unit(image-height(@img) / unit(image-width(@img))) * 100%);
+        background-image: url(@img);
+
+        @img: './img/character/c-15.svg';
+
+        @apply mix-blend-plus-darker;
+      }
+
+      &::after {
+        bottom: 37.6%;
+        margin-left: 0 - (@w / @width * 100%)/ 2 - @offset;
+        padding-bottom: (unit(image-height(@img) / unit(image-width(@img))) * 100%);
+        width: @w / @width * 100%;
+        background-image: url(@img);
+
+        @w: 56.9858;
+        @offset: -4%;
+        @img: './img/character/c-15-f.svg';
+        @apply left-1/2 bg-contain;
+      }
+    }
+
+    .c-7 {
+      top: 86.9%;
+      left: 63.6%;
+      width: @width / @mobile * 100%;
+
+      @width: 178.8099;
+
+      &::before {
+        padding-bottom: (unit(image-height(@img) / unit(image-width(@img))) * 100%);
+        background-image: url(@img);
+
+        @img: './img/character/m-c-7.svg';
+      }
+    }
+  }
+}

@@ -1,3 +1,5 @@
+@import url('../../../settings/config.less');
+
 .Landing {
   background: rgb(12, 196, 255);
   background: linear-gradient(
@@ -6,7 +8,7 @@
     rgba(161, 232, 255, 1) 50%,
     rgba(255, 255, 255, 1) 100%
   );
-  @apply h-full w-full;
+  @apply z-10 h-full w-full;
 
   .logo {
     margin-left: 0 - image-width(@img) * @scale * 0.5;
@@ -19,23 +21,17 @@
     @scale: 0.5;
     @img: './img/logo.svg';
 
-    @apply absolute left-1/2 top-10;
+    @apply absolute left-1/2 top-10 bg-no-repeat;
 
-    @keyframes Swing {
-      0% {
-        transform: rotate(0deg);
-      }
-      50% {
-        transform: rotate(0deg);
-      }
-      70% {
-        transform: rotate(5deg);
-      }
-      90% {
-        transform: rotate(-5deg);
-      }
-      100% {
-        transform: rotate(0deg);
+    @media only screen and (max-width: @MD) {
+      & {
+        margin-left: 0 - image-width(@img) * @scale * 0.5;
+        width: image-width(@img) * @scale;
+        height: image-height(@img) * @scale;
+        background-image: url(@img);
+
+        @scale: 1.5;
+        @img: './img/logo-m.svg';
       }
     }
 
@@ -47,23 +43,43 @@
       background-image: url(@img);
       background-size: 100%;
       transform-origin: 2% bottom;
-      animation: Swing 2s ease-in-out infinite;
+      animation: Swing 2s cubic-bezier(0.37, 0, 0.63, 1) infinite;
 
       @img: './img/dialog.svg';
 
-      @apply absolute;
+      @apply absolute bg-no-repeat;
+
+      @media only screen and (max-width: @MD) {
+        & {
+          top: 62.7%;
+          right: 52.4%;
+          width: image-width(@img) * @scale;
+          height: image-height(@img) * @scale;
+          background-image: url(@img);
+          transform-origin: 95% top;
+
+          @scale: 1.5;
+          @img: './img/dialog-m.svg';
+        }
+      }
     }
 
     .txt {
       padding-bottom: (unit(image-height(@img) / unit(image-width(@img))) * 100%);
       width: 100%;
       background-image: url(@img);
-      background-size: cover;
+      background-size: 100%;
       transform: translateY(15px);
 
       @img: './img/txt.svg';
 
-      @apply absolute top-full w-full;
+      @apply absolute top-full z-30 w-full bg-no-repeat;
+
+      @media only screen and (max-width: @MD) {
+        & {
+          transform: translateY(50px) scale(1.7);
+        }
+      }
     }
   }
 
@@ -77,6 +93,12 @@
     @img: './img/cloud-0.svg';
 
     @apply absolute left-1/2 px-5;
+
+    @media only screen and (max-width: @MD) {
+      & {
+        margin-left: 0 - image-width(@img) * @scale * 0.5 - 380px + 135px;
+      }
+    }
 
     & > div {
       @apply relative h-full w-full;
@@ -117,6 +139,12 @@
     @img: './img/cloud-1.svg';
 
     @apply absolute left-1/2;
+
+    @media only screen and (max-width: @MD) {
+      & {
+        margin-left: 0 - image-width(@img) * @scale * 0.5 + 320px - 70px;
+      }
+    }
   }
 
   .cloud-2 {
@@ -126,17 +154,116 @@
     height: image-height(@img) * @scale;
     background-image: url(@img);
     background-size: 100%;
-    animation: cloud_8_r30 30s ease-in-out infinite;
+    animation: cloud_8_r30 20s ease-in-out infinite;
 
     @scale: 0.6;
     @img: './img/cloud-2.svg';
 
     @apply absolute left-1/2;
+
+    @media only screen and (max-width: @MD) {
+      & {
+        margin-left: 0 - image-width(@img) * @scale * 0.5 + 320px - 10px;
+      }
+    }
+  }
+
+  .ground-m {
+    @apply absolute bottom-0 w-full;
+    @apply z-10 flex flex-row flex-nowrap items-end px-1;
+
+    & > div:nth-child(1) {
+      transform-origin: center bottom;
+      animation: flap_m 2s ease-in-out infinite;
+    }
+
+    & > div:nth-child(2) {
+      transform-origin: center bottom;
+      animation: jump_10_slow 2s ease-in-out infinite;
+    }
+
+    & > div:nth-child(3) {
+      transform-origin: center bottom;
+      animation: jump_15_slow 2s ease-in-out infinite;
+      animation-delay: -3s;
+    }
+
+    & > div:nth-child(4) {
+      transform-origin: center bottom;
+      animation: wag_y_10 10s cubic-bezier(0.68, -0.6, 0.32, 1.6) infinite;
+      animation-delay: -3s;
+    }
+
+    & > div:nth-child(5) {
+      transform-origin: center bottom;
+      animation: jump_tl_15_slow 3s ease-in-out infinite;
+      animation-delay: -3s;
+    }
+
+    & > div:nth-child(6) {
+      transform-origin: center bottom;
+      animation: wag_y_10 10s cubic-bezier(0.68, -0.6, 0.32, 1.6) infinite;
+      animation-delay: -5s;
+    }
+
+    & > div {
+      @apply relative;
+
+      & > div {
+        @apply relative w-full bg-cover bg-no-repeat;
+      }
+
+      .character0 {
+        padding-bottom: (unit(image-height(@img) / unit(image-width(@img))) * 100%);
+        background-image: url(@img);
+
+        @img: './img/char-5.svg';
+      }
+
+      .character1 {
+        padding-bottom: (unit(image-height(@img) / unit(image-width(@img))) * 100%);
+        background-image: url(@img);
+        transform: translateY(0%) translateX(30%);
+
+        @img: './img/char-6.svg';
+      }
+
+      .character2 {
+        padding-bottom: (unit(image-height(@img) / unit(image-width(@img))) * 100%);
+        background-image: url(@img);
+
+        @img: './img/char-7.svg';
+      }
+
+      .character3 {
+        padding-bottom: (unit(image-height(@img) / unit(image-width(@img))) * 100%);
+        background-image: url(@img);
+        transform: translateY(-50%) translateX(0%);
+
+        @img: './img/char-8.svg';
+      }
+
+      .character4 {
+        padding-bottom: (unit(image-height(@img) / unit(image-width(@img))) * 100%);
+        background-image: url(@img);
+        transform: translateY(-5%) translateX(-15%);
+
+        @img: './img/char-9.svg';
+      }
+
+      .character5 {
+        padding-bottom: (unit(image-height(@img) / unit(image-width(@img))) * 100%);
+        background-image: url(@img);
+        transform: translateY(-30%) translateX(-10%);
+
+        @img: './img/char-10.svg';
+      }
+    }
   }
 
   .ground {
     @apply absolute bottom-0 w-full;
-    @apply flex flex-row flex-nowrap items-end px-1;
+    @apply z-10 flex flex-row flex-nowrap items-end px-1;
 
     & > div:nth-child(1) {
       transform-origin: center bottom;
@@ -221,7 +348,6 @@
     }
 
     & > div {
-      width: 100%/15;
       @apply relative;
 
       & > div {

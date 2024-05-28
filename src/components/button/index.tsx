@@ -1,23 +1,15 @@
-import { IReactProps, TransitionType } from '@/settings/type';
-import useTween from 'lesca-use-tween';
-import { useEffect } from 'react';
+import { IReactProps } from '@/settings/type';
 import Regular from './regular';
-import { Debug } from '@/settings/type-unity';
+import { twMerge } from 'tailwind-merge';
 
-type TRegularProps = Debug<{
+type TRegularProps = IReactProps & {
   onClick?: () => void;
-  transition?: TransitionType;
-}>;
+  className?: string;
+};
 
-const Button = ({ children, onClick, transition }: IReactProps & TRegularProps) => {
-  const [style, setStyle] = useTween({ opacity: 0 });
-
-  useEffect(() => {
-    if (transition === TransitionType.FadeIn) setStyle({ opacity: 1 });
-  }, [setStyle, transition]);
-
+const Button = ({ children, className, onClick }: TRegularProps) => {
   return (
-    <button style={style} onClick={onClick}>
+    <button className={twMerge(className || '')} onClick={onClick}>
       {children}
     </button>
   );

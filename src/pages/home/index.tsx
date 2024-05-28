@@ -3,6 +3,7 @@ import { HomeContext, HomeState, HomeStepType, THomeState } from './config';
 import './index.less';
 import Landing from './landing';
 import OnloadProvider from 'lesca-react-onload';
+import Content from './content';
 
 const Home = memo(() => {
   const [state, setState] = useState<THomeState>(HomeState);
@@ -19,7 +20,9 @@ const Home = memo(() => {
         <Landing />
         {state.step >= HomeStepType.loading && (
           <OnloadProvider onload={() => setState((S) => ({ ...S, step: HomeStepType.loaded }))}>
-            <div className='w-full bg-[#b4d18f] py-20' />
+            <div className='w-full'>
+              <Content />
+            </div>
           </OnloadProvider>
         )}
       </div>
