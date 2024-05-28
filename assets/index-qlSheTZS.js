@@ -1,1 +1,0 @@
-import{r as e,j as t}from"./index-DR4c7C6W.js";const s={step:0},a=e.createContext([s,()=>{}]),r=e.memo(()=>(e.useEffect(()=>{},[]),t.jsx("div",{className:"Landing",children:"Landing"}))),m=e.memo(()=>{const[n,o]=e.useState(s);return t.jsx("div",{className:"Home",children:t.jsx(a.Provider,{value:[n,o],children:t.jsx(r,{})})})});export{m as default};
