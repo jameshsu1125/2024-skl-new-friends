@@ -1,0 +1,202 @@
+@import url('../../settings/config.less');
+
+.Navigation {
+  @apply fixed left-0 top-0 z-50 flex h-28 w-full flex-row flex-nowrap items-center justify-between bg-white;
+
+  .logo {
+    width: image-width(@img) * @scale;
+    height: image-height(@img) * @scale;
+    background-image: url(@img);
+    background-size: 100%;
+
+    @scale: 0.65;
+    @img: './img/logo.svg';
+
+    @apply ml-10;
+  }
+
+  & > div:nth-child(2) {
+    @scale: 0.7;
+    @apply flex h-full flex-row flex-nowrap items-center space-x-2 pr-10 lg:h-1/2;
+
+    & > div {
+      @apply flex h-full flex-row flex-wrap items-center justify-end space-x-2 lg:items-end;
+
+      @media only screen and (max-width: @MD) {
+        & {
+          @apply h-auto;
+        }
+      }
+    }
+
+    & > .hash {
+      // max height
+      @apply max-w-none;
+
+      @media only screen and (max-width: @MD) {
+        & {
+          @apply max-w-80 items-center;
+        }
+      }
+
+      & > button:nth-child(1) {
+        @apply bg-primary;
+      }
+
+      & > button:nth-child(2) {
+        @apply bg-secondary;
+      }
+
+      & > button:nth-child(3) {
+        @apply bg-tertiary;
+      }
+
+      & > button:nth-child(4) {
+        @apply bg-quaternary;
+      }
+
+      & > button:nth-child(5) {
+        @apply bg-quinary;
+      }
+
+      button {
+        @apply my-0 rounded-md bg-no-repeat px-2 py-1;
+
+        @media only screen and (max-width: @MD) {
+          & {
+            @apply my-1;
+          }
+        }
+
+        &:hover {
+          @apply scale-105 duration-200;
+        }
+
+        & > div {
+          background-size: 100%;
+        }
+
+        .btn-0 {
+          width: image-width(@img) * @scale;
+          height: image-height(@img) * @scale;
+          background-image: url(@img);
+
+          @img: './img/btn-0.svg';
+
+          @media only screen and (max-width: @MD) {
+            & {
+              width: image-width(@img) * @scale;
+              height: image-height(@img) * @scale;
+
+              @scale: 0.6;
+            }
+          }
+        }
+
+        .btn-1 {
+          width: image-width(@img) * @scale;
+          height: image-height(@img) * @scale;
+          background-image: url(@img);
+
+          @img: './img/btn-1.svg';
+
+          @media only screen and (max-width: @MD) {
+            & {
+              width: image-width(@img) * @scale;
+              height: image-height(@img) * @scale;
+
+              @scale: 0.6;
+            }
+          }
+        }
+
+        .btn-2 {
+          width: image-width(@img) * @scale;
+          height: image-height(@img) * @scale;
+          background-image: url(@img);
+
+          @img: './img/btn-2.svg';
+
+          @media only screen and (max-width: @MD) {
+            & {
+              width: image-width(@img) * @scale;
+              height: image-height(@img) * @scale;
+
+              @scale: 0.6;
+            }
+          }
+        }
+
+        .btn-3 {
+          width: image-width(@img) * @scale;
+          height: image-height(@img) * @scale;
+          background-image: url(@img);
+
+          @img: './img/btn-3.svg';
+
+          @media only screen and (max-width: @MD) {
+            & {
+              width: image-width(@img) * @scale;
+              height: image-height(@img) * @scale;
+
+              @scale: 0.6;
+            }
+          }
+        }
+
+        .btn-4 {
+          width: image-width(@img) * @scale;
+          height: image-height(@img) * @scale;
+          background-image: url(@img);
+
+          @img: './img/btn-4.svg';
+
+          @media only screen and (max-width: @MD) {
+            & {
+              width: image-width(@img) * @scale;
+              height: image-height(@img) * @scale;
+
+              @scale: 0.6;
+            }
+          }
+        }
+      }
+    }
+
+    & > .social {
+      @apply h-full flex-nowrap;
+
+      & > button {
+        background-size: 100% 100%;
+
+        &:hover {
+          @apply scale-110 bg-no-repeat duration-200;
+        }
+      }
+
+      .fb {
+        width: image-width(@img) * @scale;
+        height: image-height(@img) * @scale;
+        background-image: url(@img);
+
+        @img: './img/fb.svg';
+      }
+
+      .line {
+        width: image-width(@img) * @scale;
+        height: image-height(@img) * @scale;
+        background-image: url(@img);
+
+        @img: './img/line.svg';
+      }
+
+      .home {
+        width: image-width(@img) * @scale;
+        height: image-height(@img) * @scale;
+        background-image: url(@img);
+
+        @img: './img/home.svg';
+      }
+    }
+  }
+}

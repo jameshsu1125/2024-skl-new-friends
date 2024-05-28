@@ -1,0 +1,336 @@
+.Landing {
+  background: rgb(12, 196, 255);
+  background: linear-gradient(
+    180deg,
+    rgba(12, 196, 255, 1) 0%,
+    rgba(161, 232, 255, 1) 50%,
+    rgba(255, 255, 255, 1) 100%
+  );
+  @apply h-full w-full;
+
+  .logo {
+    margin-left: 0 - image-width(@img) * @scale * 0.5;
+    width: image-width(@img) * @scale;
+    height: image-height(@img) * @scale;
+    background-image: url(@img);
+    background-size: 100%;
+    filter: drop-shadow(0 0 15px rgba(0, 0, 0, 0.5));
+
+    @scale: 0.5;
+    @img: './img/logo.svg';
+
+    @apply absolute left-1/2 top-10;
+
+    @keyframes Swing {
+      0% {
+        transform: rotate(0deg);
+      }
+      50% {
+        transform: rotate(0deg);
+      }
+      70% {
+        transform: rotate(5deg);
+      }
+      90% {
+        transform: rotate(-5deg);
+      }
+      100% {
+        transform: rotate(0deg);
+      }
+    }
+
+    .dialog {
+      top: -3%;
+      right: -11%;
+      width: image-width(@img) * @scale;
+      height: image-height(@img) * @scale;
+      background-image: url(@img);
+      background-size: 100%;
+      transform-origin: 2% bottom;
+      animation: Swing 2s ease-in-out infinite;
+
+      @img: './img/dialog.svg';
+
+      @apply absolute;
+    }
+
+    .txt {
+      padding-bottom: (unit(image-height(@img) / unit(image-width(@img))) * 100%);
+      width: 100%;
+      background-image: url(@img);
+      background-size: cover;
+      transform: translateY(15px);
+
+      @img: './img/txt.svg';
+
+      @apply absolute top-full w-full;
+    }
+  }
+
+  .cloud-0 {
+    top: 19%;
+    margin-left: 0 - image-width(@img) * @scale * 0.5 - 380px;
+    width: image-width(@img) * @scale;
+    height: image-height(@img) * @scale;
+
+    @scale: 0.6;
+    @img: './img/cloud-0.svg';
+
+    @apply absolute left-1/2 px-5;
+
+    & > div {
+      @apply relative h-full w-full;
+
+      &::before {
+        top: 65%;
+        padding-bottom: (unit(image-height(@img) / unit(image-width(@img))) * 100%);
+        background-image: url(@img);
+        background-size: cover;
+        content: '';
+        transform: translateX(-15px);
+
+        @img: './img/time.svg';
+        @apply absolute w-full;
+      }
+    }
+
+    &::before {
+      background-image: url(@img);
+      background-size: 100%;
+      content: '';
+      animation: cloud_8_r15 20s ease-in-out infinite;
+      @apply absolute left-0 top-0 h-full w-full;
+    }
+  }
+
+  .cloud-1 {
+    top: 12%;
+    margin-left: 0 - image-width(@img) * @scale * 0.5 + 320px;
+    width: image-width(@img) * @scale;
+    height: image-height(@img) * @scale;
+    background-image: url(@img);
+    background-size: 100%;
+    animation: cloud_8_r15 20s ease-in-out infinite;
+    animation-delay: -5s;
+
+    @scale: 0.6;
+    @img: './img/cloud-1.svg';
+
+    @apply absolute left-1/2;
+  }
+
+  .cloud-2 {
+    top: 34%;
+    margin-left: 0 - image-width(@img) * @scale * 0.5 + 420px;
+    width: image-width(@img) * @scale;
+    height: image-height(@img) * @scale;
+    background-image: url(@img);
+    background-size: 100%;
+    animation: cloud_8_r30 30s ease-in-out infinite;
+
+    @scale: 0.6;
+    @img: './img/cloud-2.svg';
+
+    @apply absolute left-1/2;
+  }
+
+  .ground {
+    @apply absolute bottom-0 w-full;
+    @apply flex flex-row flex-nowrap items-end px-1;
+
+    & > div:nth-child(1) {
+      transform-origin: center bottom;
+      animation: flap_3 5s ease-in-out infinite;
+      animation-delay: -1s;
+    }
+
+    & > div:nth-child(2) {
+      transform-origin: center bottom;
+      animation: flap_3 3s ease-in-out infinite;
+      animation-delay: -5s;
+    }
+
+    & > div:nth-child(3) {
+      transform-origin: center bottom;
+      animation: jump_3 0.7s ease-in-out infinite;
+      animation-delay: 0s;
+    }
+
+    & > div:nth-child(4) {
+      transform-origin: center bottom;
+      animation: flap_3 2s ease-in-out infinite;
+    }
+
+    & > div:nth-child(5) {
+      z-index: 2;
+      transform-origin: center bottom;
+      animation: flap_3 10s ease-in-out infinite;
+      animation-delay: 0s;
+    }
+
+    & > div:nth-child(6) {
+      transform-origin: center bottom;
+      animation: flap_m 2s ease-in-out infinite;
+    }
+
+    & > div:nth-child(7) {
+      transform-origin: center bottom;
+      animation: jump_10_slow 2s ease-in-out infinite;
+    }
+
+    & > div:nth-child(8) {
+      transform-origin: center bottom;
+      animation: jump_15_slow 2s ease-in-out infinite;
+      animation-delay: -3s;
+    }
+
+    & > div:nth-child(9) {
+      transform-origin: center bottom;
+      animation: wag_y_10 10s cubic-bezier(0.68, -0.6, 0.32, 1.6) infinite;
+      animation-delay: -3s;
+    }
+
+    & > div:nth-child(10) {
+      transform-origin: center bottom;
+      animation: jump_tl_15_slow 3s ease-in-out infinite;
+      animation-delay: -3s;
+    }
+
+    & > div:nth-child(11) {
+      transform-origin: center bottom;
+      animation: wag_y_10 10s cubic-bezier(0.68, -0.6, 0.32, 1.6) infinite;
+      animation-delay: -5s;
+    }
+
+    & > div:nth-child(12) {
+      transform-origin: center bottom;
+      animation: flap_m 5s cubic-bezier(0.68, -0.6, 0.32, 1.6) infinite;
+      animation-delay: -2s;
+    }
+
+    & > div:nth-child(13) {
+      transform-origin: center bottom;
+      animation: flap_3 5s ease-out infinite;
+      animation-delay: -2.5s;
+    }
+
+    & > div:nth-child(14) {
+      transform-origin: center bottom;
+      animation: flap_3 5s ease-out infinite;
+      animation-delay: 0s;
+    }
+
+    & > div {
+      width: 100%/15;
+      @apply relative;
+
+      & > div {
+        @apply relative w-full bg-cover bg-no-repeat;
+      }
+
+      .character0 {
+        padding-bottom: (unit(image-height(@img) / unit(image-width(@img))) * 100%);
+        background-image: url(@img);
+
+        @img: './img/char-0.svg';
+      }
+
+      .character1 {
+        padding-bottom: (unit(image-height(@img) / unit(image-width(@img))) * 100%);
+        background-image: url(@img);
+        transform: translateY(0%) translateX(-9%);
+
+        @img: './img/char-1.svg';
+      }
+
+      .character2 {
+        padding-bottom: (unit(image-height(@img) / unit(image-width(@img))) * 100%);
+        background-image: url(@img);
+
+        @img: './img/char-2.svg';
+      }
+
+      .character3 {
+        padding-bottom: (unit(image-height(@img) / unit(image-width(@img))) * 100%);
+        background-image: url(@img);
+        transform: translateY(0%) translateX(9%);
+
+        @img: './img/char-3.svg';
+      }
+
+      .character4 {
+        padding-bottom: (unit(image-height(@img) / unit(image-width(@img))) * 100%);
+        background-image: url(@img);
+        transform: translateY(0%) translateX(-15%);
+
+        @img: './img/char-4.svg';
+      }
+
+      .character5 {
+        padding-bottom: (unit(image-height(@img) / unit(image-width(@img))) * 100%);
+        background-image: url(@img);
+
+        @img: './img/char-5.svg';
+      }
+
+      .character6 {
+        padding-bottom: (unit(image-height(@img) / unit(image-width(@img))) * 100%);
+        background-image: url(@img);
+
+        @img: './img/char-6.svg';
+      }
+
+      .character7 {
+        padding-bottom: (unit(image-height(@img) / unit(image-width(@img))) * 100%);
+        background-image: url(@img);
+
+        @img: './img/char-7.svg';
+      }
+
+      .character8 {
+        padding-bottom: (unit(image-height(@img) / unit(image-width(@img))) * 100%);
+        background-image: url(@img);
+        transform: translateY(-50%) translateX(18%);
+
+        @img: './img/char-8.svg';
+      }
+
+      .character9 {
+        padding-bottom: (unit(image-height(@img) / unit(image-width(@img))) * 100%);
+        background-image: url(@img);
+        transform: translateY(-5%) translateX(0%);
+
+        @img: './img/char-9.svg';
+      }
+
+      .character10 {
+        padding-bottom: (unit(image-height(@img) / unit(image-width(@img))) * 100%);
+        background-image: url(@img);
+        transform: translateY(-30%) translateX(0%);
+
+        @img: './img/char-10.svg';
+      }
+
+      .character11 {
+        padding-bottom: (unit(image-height(@img) / unit(image-width(@img))) * 100%);
+        background-image: url(@img);
+
+        @img: './img/char-11.svg';
+      }
+
+      .character12 {
+        padding-bottom: (unit(image-height(@img) / unit(image-width(@img))) * 100%);
+        background-image: url(@img);
+
+        @img: './img/char-12.svg';
+      }
+
+      .character13 {
+        padding-bottom: (unit(image-height(@img) / unit(image-width(@img))) * 100%);
+        background-image: url(@img);
+
+        @img: './img/char-13.svg';
+      }
+    }
+  }
+}
