@@ -7,7 +7,12 @@ const hashes = ['experience', 'purchase', 'mommy', 'plan', 'contact'];
 const Navigation = memo(() => (
   <div className='Navigation'>
     <div>
-      <div className='logo' />
+      <button
+        className='logo'
+        onClick={() => {
+          window.location.hash = '';
+        }}
+      />
     </div>
     <div>
       <div className='hash'>
