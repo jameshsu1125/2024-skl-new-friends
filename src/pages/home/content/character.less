@@ -2,13 +2,13 @@
 @mobile: 540;
 
 .Character {
-  @apply absolute top-0 h-full w-full;
+  @apply pointer-events-none absolute top-0 h-full w-full;
 
   .d {
     @apply relative left-0 top-0 h-full w-full;
 
     & > div {
-      @apply absolute;
+      @apply pointer-events-auto absolute;
 
       &::before {
         content: '';
@@ -351,6 +351,8 @@
   }
 
   .m {
+    @apply pointer-events-none relative left-0 top-0 h-full w-full;
+
     & > div {
       @apply absolute;
 

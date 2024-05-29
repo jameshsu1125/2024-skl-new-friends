@@ -2,13 +2,13 @@
 @mobile: 540;
 
 .Tree {
-  @apply absolute top-0 h-full w-full;
+  @apply pointer-events-none absolute top-0 h-full w-full;
 
   .d {
     @apply relative left-0 top-0 h-full w-full;
 
     & > div {
-      @apply absolute;
+      @apply pointer-events-auto absolute;
 
       &::before {
         content: '';
@@ -31,6 +31,9 @@
       &::before {
         padding-bottom: (unit(image-height(@img) / unit(image-width(@img))) * 100%);
         background-image: url(@img);
+        transform-origin: center bottom;
+        animation: flap_3 5s ease-in-out infinite;
+        animation-delay: -1s;
 
         @img: './img/tree/tree-0.svg';
       }
@@ -46,6 +49,9 @@
       &::before {
         padding-bottom: (unit(image-height(@img) / unit(image-width(@img))) * 100%);
         background-image: url(@img);
+        transform-origin: center bottom;
+        animation: flap_2 5s ease-in-out infinite;
+        animation-delay: -2s;
 
         @img: './img/tree/tree-1.svg';
       }
@@ -71,6 +77,9 @@
       &::before {
         padding-bottom: (unit(image-height(@img) / unit(image-width(@img))) * 100%);
         background-image: url(@img);
+        transform-origin: center bottom;
+        animation: flap_3 5s ease-in-out infinite;
+        animation-delay: -1s;
 
         @img: './img/tree/tree-2.svg';
       }
@@ -96,6 +105,9 @@
       &::before {
         padding-bottom: (unit(image-height(@img) / unit(image-width(@img))) * 100%);
         background-image: url(@img);
+        transform-origin: center bottom;
+        animation: flap_scaleY_3 5s ease-in-out infinite;
+        animation-delay: -1s;
 
         @img: './img/tree/tree-3.svg';
       }
@@ -122,6 +134,9 @@
       &::before {
         padding-bottom: (unit(image-height(@img) / unit(image-width(@img))) * 100%);
         background-image: url(@img);
+        transform-origin: center bottom;
+        animation: flap_2 5s ease-in-out infinite;
+        animation-delay: -1s;
 
         @img: './img/tree/tree-4.svg';
       }
@@ -137,6 +152,9 @@
       &::before {
         padding-bottom: (unit(image-height(@img) / unit(image-width(@img))) * 100%);
         background-image: url(@img);
+        transform-origin: center bottom;
+        animation: flap_2 5.5s ease-in-out infinite;
+        animation-delay: -2s;
 
         @img: './img/tree/tree-5.svg';
       }
@@ -152,6 +170,9 @@
       &::before {
         padding-bottom: (unit(image-height(@img) / unit(image-width(@img))) * 100%);
         background-image: url(@img);
+        transform-origin: center bottom;
+        animation: flap_3 5.5s ease-in-out infinite;
+        animation-delay: -1s;
 
         @img: './img/tree/tree-6.svg';
       }
@@ -194,6 +215,9 @@
       &::before {
         padding-bottom: (unit(image-height(@img) / unit(image-width(@img))) * 100%);
         background-image: url(@img);
+        transform-origin: center bottom;
+        animation: flap_3 5.5s ease-in-out infinite;
+        animation-delay: -1s;
 
         @img: './img/tree/m-tree-0.svg';
       }
@@ -221,6 +245,9 @@
       &::before {
         padding-bottom: (unit(image-height(@img) / unit(image-width(@img))) * 100%);
         background-image: url(@img);
+        transform-origin: center bottom;
+        animation: flap_scaleY_3 5s ease-in-out infinite;
+        animation-delay: -1s;
 
         @img: './img/tree/m-tree-1.svg';
       }

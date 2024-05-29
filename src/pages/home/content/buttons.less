@@ -2,10 +2,15 @@
 @mobile: 540;
 
 .Buttons {
-  @apply absolute top-0 h-full w-full;
+  @apply pointer-events-none absolute top-0 h-full w-full;
 
   .d {
     @apply relative left-0 top-0 h-full w-full;
+
+    button,
+    & > div {
+      @apply pointer-events-auto;
+    }
 
     & > div {
       @apply absolute;
