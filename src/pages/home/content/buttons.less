@@ -33,9 +33,16 @@
 
       @width: 157.3807;
 
+      &:hover {
+        &::before {
+          background-position-y: 100%;
+        }
+      }
+
       &::before {
-        padding-bottom: (unit(image-height(@img) / unit(image-width(@img))) * 100%);
+        padding-bottom: (unit(image-height(@img) / unit(image-width(@img))) * 50%);
         background-image: url(@img);
+        background-position-y: 0%;
 
         @img: './img/buttons/c-0.svg';
       }
@@ -53,8 +60,27 @@
       &::before {
         padding-bottom: (unit(image-height(@img) / unit(image-width(@img))) * 100%);
         background-image: url(@img);
+        transform-origin: center center;
+        animation: scaleXY_150 1s ease-in-out infinite;
+        animation-delay: 0s;
 
         @img: './img/buttons/c-1.svg';
+      }
+
+      &::after {
+        bottom: 40.6%;
+        margin-left: -66.321489%;
+        padding-bottom: (unit(image-height(@img) / unit(image-width(@img))) * 100%);
+        width: @w / @width * 100%;
+        background-image: url(@img);
+        transform-origin: center center;
+        animation: visible_01 1s ease-in-out infinite;
+        animation-delay: 0s;
+
+        @w: 30.9972;
+        @offset: -4%;
+        @img: './img/buttons/c-1-f.svg';
+        @apply left-1/2 bg-contain;
       }
     }
 
@@ -65,9 +91,16 @@
 
       @width: 157.3807;
 
+      &:hover {
+        &::before {
+          background-position-y: 100%;
+        }
+      }
+
       &::before {
-        padding-bottom: (unit(image-height(@img) / unit(image-width(@img))) * 100%);
+        padding-bottom: (unit(image-height(@img) / unit(image-width(@img))) * 50%);
         background-image: url(@img);
+        background-position-y: 0%;
 
         @img: './img/buttons/c-0.svg';
       }
@@ -85,8 +118,27 @@
       &::before {
         padding-bottom: (unit(image-height(@img) / unit(image-width(@img))) * 100%);
         background-image: url(@img);
+        transform-origin: center center;
+        animation: scaleXY_150 1s ease-in-out infinite;
+        animation-delay: 0s;
 
         @img: './img/buttons/c-1.svg';
+      }
+
+      &::after {
+        bottom: 40.6%;
+        margin-left: -66.321489%;
+        padding-bottom: (unit(image-height(@img) / unit(image-width(@img))) * 100%);
+        width: @w / @width * 100%;
+        background-image: url(@img);
+        transform-origin: center center;
+        animation: visible_01 1s ease-in-out infinite;
+        animation-delay: 0s;
+
+        @w: 30.9972;
+        @offset: -4%;
+        @img: './img/buttons/c-1-f.svg';
+        @apply left-1/2 bg-contain;
       }
     }
 
@@ -99,9 +151,21 @@
 
       @apply cursor-pointer;
 
+      &:hover {
+        &::before {
+          background-position-y: 100%;
+        }
+
+        &::after {
+          transform: scale(1.2);
+          transform-origin: center bottom;
+        }
+      }
+
       &::before {
-        padding-bottom: (unit(image-height(@img) / unit(image-width(@img))) * 100%);
+        padding-bottom: (unit(image-height(@img) / unit(image-width(@img))) * 50%);
         background-image: url(@img);
+        background-position-y: 0%;
 
         @img: './img/buttons/c-4.svg';
       }
@@ -112,6 +176,7 @@
         padding-bottom: (unit(image-height(@img) / unit(image-width(@img))) * 100%);
         width: @w / @width * 100%;
         background-image: url(@img);
+        transition: 0.5s;
 
         @w: 200;
         @offset: 10%;
@@ -129,9 +194,21 @@
 
       @apply cursor-pointer;
 
+      &:hover {
+        &::before {
+          background-position-y: 100%;
+        }
+
+        &::after {
+          transform: scale(1.2);
+          transform-origin: center bottom;
+        }
+      }
+
       &::before {
-        padding-bottom: (unit(image-height(@img) / unit(image-width(@img))) * 100%);
+        padding-bottom: (unit(image-height(@img) / unit(image-width(@img))) * 50%);
         background-image: url(@img);
+        background-position-y: 0%;
 
         @img: './img/buttons/c-5.svg';
       }
@@ -142,6 +219,7 @@
         padding-bottom: (unit(image-height(@img) / unit(image-width(@img))) * 100%);
         width: @w / @width * 100%;
         background-image: url(@img);
+        transition: 0.5s;
 
         @w: 200;
         @offset: -13%;
