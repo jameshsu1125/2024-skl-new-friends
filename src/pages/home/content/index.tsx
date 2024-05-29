@@ -13,6 +13,13 @@ const Content = memo(() => {
           <Tree />
           <Character />
           <Buttons />
+          <div className='absolute left-0 top-0 h-full w-full'>
+            <div id='experience' />
+            <div id='purchase' />
+            <div id='mommy' />
+            <div id='plan' />
+            <div id='contact' />
+          </div>
         </div>
       </div>
     </div>

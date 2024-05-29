@@ -26,4 +26,67 @@
       @apply pointer-events-none absolute bottom-0 left-0 right-0 top-0;
     }
   }
+
+  .a {
+    &::after {
+      content: '';
+      @apply absolute top-28;
+    }
+  }
+
+  #experience {
+    .a;
+    @apply absolute top-0 -mt-28;
+  }
+
+  #purchase {
+    top: 20.6%;
+
+    .a;
+    @apply absolute -mt-28;
+
+    @media only screen and (max-width: @MD) {
+      & {
+        top: 20.3%;
+      }
+    }
+  }
+
+  #mommy {
+    top: 49.1%;
+
+    .a;
+    @apply absolute -mt-28;
+    @media only screen and (max-width: @MD) {
+      & {
+        top: 55.1%;
+      }
+    }
+  }
+
+  #plan {
+    top: 75.8%;
+
+    .a;
+    @apply absolute -mt-28;
+
+    @media only screen and (max-width: @MD) {
+      & {
+        top: 81.4%;
+      }
+    }
+  }
+
+  #contact {
+    top: 86.3%;
+
+    .a;
+    @apply absolute -mt-28;
+
+    @media only screen and (max-width: @MD) {
+      & {
+        top: 89.3%;
+      }
+    }
+  }
 }
