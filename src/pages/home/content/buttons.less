@@ -230,6 +230,13 @@
   }
 
   .m {
+    @apply relative left-0 top-0 h-full w-full;
+
+    button,
+    & > div {
+      @apply pointer-events-auto;
+    }
+
     & > div {
       @apply absolute;
 
@@ -251,9 +258,16 @@
 
       @width: 90.7185;
 
+      &:active {
+        &::before {
+          background-position-y: 100%;
+        }
+      }
+
       &::before {
-        padding-bottom: (unit(image-height(@img) / unit(image-width(@img))) * 100%);
+        padding-bottom: (unit(image-height(@img) / unit(image-width(@img))) * 50%);
         background-image: url(@img);
+        background-position-y: 0%;
 
         @img: './img/buttons/c-0.svg';
       }
@@ -271,8 +285,27 @@
       &::before {
         padding-bottom: (unit(image-height(@img) / unit(image-width(@img))) * 100%);
         background-image: url(@img);
+        transform-origin: center center;
+        animation: scaleXY_150 1s ease-in-out infinite;
+        animation-delay: 0s;
 
         @img: './img/buttons/c-1.svg';
+      }
+
+      &::after {
+        bottom: 40.6%;
+        margin-left: -95.321489%;
+        padding-bottom: (unit(image-height(@img) / unit(image-width(@img))) * 100%);
+        width: @w / @width * 100%;
+        background-image: url(@img);
+        transform-origin: center center;
+        animation: visible_01 1s ease-in-out infinite;
+        animation-delay: 0s;
+
+        @w: 30.9972;
+        @offset: -4%;
+        @img: './img/buttons/c-1-f.svg';
+        @apply left-1/2 bg-contain;
       }
     }
 
@@ -283,9 +316,16 @@
 
       @width: 90.7185;
 
+      &:active {
+        &::before {
+          background-position-y: 100%;
+        }
+      }
+
       &::before {
-        padding-bottom: (unit(image-height(@img) / unit(image-width(@img))) * 100%);
+        padding-bottom: (unit(image-height(@img) / unit(image-width(@img))) * 50%);
         background-image: url(@img);
+        background-position-y: 0%;
 
         @img: './img/buttons/c-0.svg';
       }
@@ -295,7 +335,7 @@
 
     .c-3 {
       top: 85.1% + 0.9%;
-      left: 68.7% + 15.5%;
+      left: 68.7% + 14.5%;
       width: @width / @mobile * 100%;
 
       @width: 21.5447;
@@ -303,8 +343,27 @@
       &::before {
         padding-bottom: (unit(image-height(@img) / unit(image-width(@img))) * 100%);
         background-image: url(@img);
+        transform-origin: center center;
+        animation: scaleXY_150 1s ease-in-out infinite;
+        animation-delay: 0s;
 
         @img: './img/buttons/c-1.svg';
+      }
+
+      &::after {
+        bottom: 40.6%;
+        margin-left: -95.321489%;
+        padding-bottom: (unit(image-height(@img) / unit(image-width(@img))) * 100%);
+        width: @w / @width * 100%;
+        background-image: url(@img);
+        transform-origin: center center;
+        animation: visible_01 1s ease-in-out infinite;
+        animation-delay: 0s;
+
+        @w: 30.9972;
+        @offset: -4%;
+        @img: './img/buttons/c-1-f.svg';
+        @apply left-1/2 bg-contain;
       }
     }
 
@@ -317,9 +376,21 @@
 
       @apply cursor-pointer;
 
+      &:active {
+        &::before {
+          background-position-y: 100%;
+        }
+
+        &::after {
+          transform: scale(1.2);
+          transform-origin: right 60%;
+        }
+      }
+
       &::before {
-        padding-bottom: (unit(image-height(@img) / unit(image-width(@img))) * 100%);
+        padding-bottom: (unit(image-height(@img) / unit(image-width(@img))) * 50%);
         background-image: url(@img);
+        background-position-y: 0%;
 
         @img: './img/buttons/m-c-4.svg';
       }
@@ -347,9 +418,21 @@
 
       @apply cursor-pointer;
 
+      &:active {
+        &::before {
+          background-position-y: 100%;
+        }
+
+        &::after {
+          transform: scale(1.2);
+          transform-origin: right 60%;
+        }
+      }
+
       &::before {
-        padding-bottom: (unit(image-height(@img) / unit(image-width(@img))) * 100%);
+        padding-bottom: (unit(image-height(@img) / unit(image-width(@img))) * 50%);
         background-image: url(@img);
+        background-position-y: 0%;
 
         @img: './img/buttons/c-5.svg';
       }
