@@ -1,0 +1,290 @@
+.ground {
+  @scale: 0.72;
+  @baseHeight: -50px;
+  & > div {
+    background-size: 100%;
+    @apply pointer-events-auto absolute left-1/2 bg-center bg-no-repeat;
+  }
+
+  .c0 {
+    bottom: @baseHeight + 117px;
+    margin-left: -8px;
+    width: image-width(@img) * @scale;
+    height: image-height(@img) * @scale;
+    background-image: url(@img);
+    transform-origin: center bottom;
+    animation: wag_y_10 10s cubic-bezier(0.68, -0.6, 0.32, 1.6) infinite;
+    animation-delay: -3s;
+
+    @img: './img/char-8.svg';
+  }
+
+  .c1 {
+    bottom: @baseHeight + 50px;
+    margin-left: 87px;
+    width: image-width(@img) * @scale;
+    height: image-height(@img) * @scale;
+    background-image: url(@img);
+    transform-origin: center bottom;
+    animation: jump_tl_15_slow 3s ease-in-out infinite;
+    animation-delay: -3s;
+
+    @img: './img/char-9.svg';
+  }
+
+  .c2 {
+    bottom: @baseHeight + 79px;
+    margin-left: 171px;
+    width: image-width(@img) * @scale;
+    height: image-height(@img) * @scale;
+    background-image: url(@img);
+    transform-origin: center bottom;
+    animation: wag_y_10 10s cubic-bezier(0.68, -0.6, 0.32, 1.6) infinite;
+    animation-delay: -5s;
+
+    @img: './img/char-10.svg';
+  }
+
+  .c3 {
+    bottom: @baseHeight + 50px;
+    margin-left: 252px;
+    width: image-width(@img) * @scale;
+    height: image-height(@img) * @scale;
+    background-image: url(@img);
+    transform-origin: center bottom;
+    animation: flap_m 5s cubic-bezier(0.68, -0.6, 0.32, 1.6) infinite;
+    animation-delay: -2s;
+
+    @img: './img/char-11.svg';
+  }
+
+  .c4 {
+    bottom: @baseHeight + 50px;
+    margin-left: 402px;
+    width: image-width(@img) * @scale;
+    height: image-height(@img) * @scale;
+    background-image: url(@img);
+    transform-origin: center bottom;
+    animation: flap_3 5s ease-out infinite;
+    animation-delay: -2.5s;
+
+    @img: './img/char-12.svg';
+  }
+
+  .c5 {
+    bottom: @baseHeight + 53px;
+    margin-left: 534px;
+    width: image-width(@img) * @scale;
+    height: image-height(@img) * @scale;
+    background-image: url(@img);
+    transform-origin: center bottom;
+    animation: flap_3 5s ease-out infinite;
+    animation-delay: 0s;
+
+    @img: './img/char-13.svg';
+
+    @media only screen and (max-width: 1200px) {
+      & {
+        display: none;
+      }
+    }
+  }
+
+  .c6 {
+    bottom: @baseHeight + 50px;
+    margin-left: -150px;
+    width: image-width(@img) * @scale;
+    height: image-height(@img) * @scale;
+    background-image: url(@img);
+    transform-origin: center bottom;
+    animation: jump_15_slow 2s ease-in-out infinite;
+    animation-delay: -3s;
+
+    @img: './img/char-7.svg';
+  }
+
+  .c7 {
+    bottom: @baseHeight + 50px;
+    margin-left: -200px;
+    width: image-width(@img) * @scale;
+    height: image-height(@img) * @scale;
+    background-image: url(@img);
+    transform-origin: center bottom;
+    animation: jump_10_slow 2s ease-in-out infinite;
+
+    @img: './img/char-6.svg';
+  }
+
+  .c8 {
+    bottom: @baseHeight + 55px;
+    margin-left: -294px;
+    width: image-width(@img) * @scale;
+    height: image-height(@img) * @scale;
+    background-image: url(@img);
+    transform-origin: center bottom;
+    animation: flap_m 2s ease-in-out infinite;
+
+    @img: './img/char-5.svg';
+  }
+
+  .c9 {
+    bottom: @baseHeight + 50px;
+    margin-left: -376px;
+    width: image-width(@img) * @scale;
+    height: image-height(@img) * @scale;
+    background-image: url(@img);
+    transform-origin: center bottom;
+    animation: flap_3 10s ease-in-out infinite;
+    animation-delay: 0s;
+
+    @img: './img/char-4.svg';
+  }
+
+  .c10 {
+    bottom: @baseHeight + 50px;
+    margin-left: -429px;
+    width: image-width(@img) * @scale;
+    height: image-height(@img) * @scale;
+    background-image: url(@img);
+    transform-origin: center bottom;
+    animation: flap_3 2s ease-in-out infinite;
+
+    @img: './img/char-3.svg';
+  }
+
+  .c11 {
+    bottom: @baseHeight + 50px;
+    margin-left: -495px;
+    width: image-width(@img) * @scale;
+    height: image-height(@img) * @scale;
+    background-image: url(@img);
+    transform-origin: center bottom;
+    animation: jump_3 0.7s ease-in-out infinite;
+    animation-delay: 0s;
+
+    @img: './img/char-2.svg';
+  }
+
+  .c12 {
+    bottom: @baseHeight + 50px;
+    margin-left: -706px;
+    width: image-width(@img) * @scale;
+    height: image-height(@img) * @scale;
+    background-image: url(@img);
+    transform-origin: center bottom;
+    animation: flap_3 3s ease-in-out infinite;
+    animation-delay: -5s;
+
+    @img: './img/char-0.svg';
+
+    @media only screen and (max-width: 1400px) {
+      & {
+        display: none;
+      }
+    }
+  }
+
+  .c13 {
+    bottom: @baseHeight + 50px;
+    margin-left: -626px;
+    width: image-width(@img) * @scale;
+    height: image-height(@img) * @scale;
+    background-image: url(@img);
+    transform-origin: center bottom;
+    animation: flap_3 5s ease-in-out infinite;
+    animation-delay: -1s;
+
+    @img: './img/char-1.svg';
+
+    @media only screen and (max-width: 1200px) {
+      & {
+        display: none;
+      }
+    }
+  }
+}
+
+.ground-m {
+  @scale: 0.9;
+  @baseHeight: -120px;
+  & > div {
+    background-size: 100%;
+    @apply pointer-events-auto absolute left-1/2 bg-center bg-no-repeat;
+  }
+
+  .c0 {
+    bottom: @baseHeight + 199px;
+    margin-left: -8px;
+    width: image-width(@img) * @scale;
+    height: image-height(@img) * @scale;
+    background-image: url(@img);
+    transform-origin: center bottom;
+    animation: wag_y_10 10s cubic-bezier(0.68, -0.6, 0.32, 1.6) infinite;
+    animation-delay: -3s;
+
+    @img: './img/char-8.svg';
+  }
+
+  .c1 {
+    bottom: @baseHeight + 123px;
+    margin-left: 114px;
+    width: image-width(@img) * @scale;
+    height: image-height(@img) * @scale;
+    background-image: url(@img);
+    transform-origin: center bottom;
+    animation: jump_tl_15_slow 3s ease-in-out infinite;
+    animation-delay: -3s;
+
+    @img: './img/char-9.svg';
+  }
+
+  .c2 {
+    bottom: @baseHeight + 134px;
+    margin-left: 219px;
+    width: image-width(@img) * @scale;
+    height: image-height(@img) * @scale;
+    background-image: url(@img);
+    transform-origin: center bottom;
+    animation: wag_y_10 10s cubic-bezier(0.68, -0.6, 0.32, 1.6) infinite;
+    animation-delay: -5s;
+
+    @img: './img/char-10.svg';
+  }
+
+  .c3 {
+    bottom: @baseHeight + 120px;
+    margin-left: -181px;
+    width: image-width(@img) * @scale;
+    height: image-height(@img) * @scale;
+    background-image: url(@img);
+    transform-origin: center bottom;
+    animation: jump_15_slow 2s ease-in-out infinite;
+    animation-delay: -3s;
+
+    @img: './img/char-7.svg';
+  }
+
+  .c4 {
+    bottom: @baseHeight + 120px;
+    margin-left: -235px;
+    width: image-width(@img) * @scale;
+    height: image-height(@img) * @scale;
+    background-image: url(@img);
+    transform-origin: center bottom;
+    animation: jump_10_slow 2s ease-in-out infinite;
+
+    @img: './img/char-6.svg';
+  }
+
+  .c5 {
+    bottom: @baseHeight + 120px;
+    margin-left: -362px;
+    width: image-width(@img) * @scale;
+    height: image-height(@img) * @scale;
+    background-image: url(@img);
+    transform-origin: center bottom;
+    animation: flap_m 2s ease-in-out infinite;
+
+    @img: './img/char-5.svg';
+  }
+}
