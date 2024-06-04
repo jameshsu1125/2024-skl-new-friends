@@ -27,11 +27,11 @@
     }
 
     .c-0 {
-      top: 70.1%;
+      top: 63.3%;
       left: 39.3%;
       width: @width / @desktop * 100%;
 
-      @width: 157.3807;
+      @width: 300.696;
 
       &:hover {
         &::before {
@@ -44,15 +44,15 @@
         background-image: url(@img);
         background-position-y: 0%;
 
-        @img: './img/buttons/c-0.svg';
+        @img: './img/buttons/n-b-0.svg';
       }
 
       @apply cursor-pointer;
     }
 
     .c-1 {
-      top: 71.6%;
-      left: 46.3%;
+      top: 64.8%;
+      left: 53.7%;
       width: @width / @desktop * 100%;
 
       @width: 37.3762;
@@ -85,11 +85,11 @@
     }
 
     .c-2 {
-      top: 80.5%;
-      left: 72.2%;
+      top: 66.6%;
+      left: 39.3%;
       width: @width / @desktop * 100%;
 
-      @width: 157.3807;
+      @width: 300.696;
 
       &:hover {
         &::before {
@@ -102,15 +102,15 @@
         background-image: url(@img);
         background-position-y: 0%;
 
-        @img: './img/buttons/c-0.svg';
+        @img: './img/buttons/n-b-1.svg';
       }
 
       @apply cursor-pointer;
     }
 
     .c-3 {
-      top: 80.5% + 1.5%;
-      left: 72.2% + 7%;
+      top: 68.1%;
+      left: 53.7%;
       width: @width / @desktop * 100%;
 
       @width: 37.3762;
@@ -143,22 +143,15 @@
     }
 
     .c-4 {
-      top: 93.1%;
-      left: 30.7%;
+      top: 80.9%;
+      left: 67.9%;
       width: @width / @desktop * 100%;
 
-      @width: 362.0557;
-
-      @apply cursor-pointer;
+      @width: 157.3807;
 
       &:hover {
         &::before {
           background-position-y: 100%;
-        }
-
-        &::after {
-          transform: scale(1.2);
-          transform-origin: center bottom;
         }
       }
 
@@ -167,65 +160,70 @@
         background-image: url(@img);
         background-position-y: 0%;
 
-        @img: './img/buttons/c-4.svg';
+        @img: './img/buttons/c-0.svg';
+      }
+
+      @apply cursor-pointer;
+    }
+
+    .c-5 {
+      top: 82.5%;
+      left: 75.1%;
+      width: @width / @desktop * 100%;
+
+      @width: 37.3762;
+
+      &::before {
+        padding-bottom: (unit(image-height(@img) / unit(image-width(@img))) * 100%);
+        background-image: url(@img);
+        transform-origin: center center;
+        animation: scaleXY_150 1s ease-in-out infinite;
+        animation-delay: 0s;
+
+        @img: './img/buttons/c-1.svg';
       }
 
       &::after {
-        bottom: 69.2%;
-        margin-left: 0 - (@w / @width * 100%)/ 2 - @offset;
+        bottom: 40.6%;
+        margin-left: -66.321489%;
         padding-bottom: (unit(image-height(@img) / unit(image-width(@img))) * 100%);
         width: @w / @width * 100%;
         background-image: url(@img);
-        transition: 0.5s;
+        transform-origin: center center;
+        animation: visible_01 1s ease-in-out infinite;
+        animation-delay: 0s;
 
-        @w: 200;
-        @offset: 10%;
-        @img: './img/buttons/c-4-f.svg';
+        @w: 30.9972;
+        @offset: -4%;
+        @img: './img/buttons/c-1-f.svg';
         @apply left-1/2 bg-contain;
       }
     }
 
-    .c-5 {
-      top: 93.6%;
-      left: 50.3%;
+    .c-6 {
+      top: 93.1%;
+      left: 37.4%;
       width: @width / @desktop * 100%;
 
-      @width: 369.8335;
-
-      @apply cursor-pointer;
+      @width: 603.3027;
 
       &:hover {
         &::before {
-          background-position-y: 100%;
-        }
-
-        &::after {
-          transform: scale(1.2);
-          transform-origin: center bottom;
+          @apply border-b-2 border-quinary;
         }
       }
 
       &::before {
-        padding-bottom: (unit(image-height(@img) / unit(image-width(@img))) * 50%);
-        background-image: url(@img);
-        background-position-y: 0%;
-
-        @img: './img/buttons/c-5.svg';
-      }
-
-      &::after {
-        bottom: 91.4%;
-        margin-left: 0 - (@w / @width * 100%)/ 2 - @offset;
         padding-bottom: (unit(image-height(@img) / unit(image-width(@img))) * 100%);
-        width: @w / @width * 100%;
         background-image: url(@img);
-        transition: 0.5s;
+        transition: 0.1s;
 
-        @w: 200;
-        @offset: -13%;
-        @img: './img/buttons/c-5-f.svg';
-        @apply left-1/2 bg-contain;
+        @img: './img/buttons/contact.svg';
+
+        @apply bg-cover bg-center bg-no-repeat;
       }
+
+      @apply cursor-pointer;
     }
   }
 
@@ -252,11 +250,11 @@
     }
 
     .c-0 {
-      top: 69.8%;
-      left: 39.4%;
+      top: 70.8%;
+      left: 30.4%;
       width: @width / @mobile * 100%;
 
-      @width: 90.7185;
+      @width: 190.6357;
 
       &:active {
         &::before {
@@ -269,15 +267,15 @@
         background-image: url(@img);
         background-position-y: 0%;
 
-        @img: './img/buttons/c-0.svg';
+        @img: './img/buttons/n-b-0.svg';
       }
 
       @apply cursor-pointer;
     }
 
     .c-1 {
-      top: 69.8% + 0.9%;
-      left: 38.2% + 15.5%;
+      top: 72%;
+      left: 63.5%;
       width: @width / @mobile * 100%;
 
       @width: 21.5447;
@@ -310,7 +308,65 @@
     }
 
     .c-2 {
-      top: 85.1%;
+      top: 73.4%;
+      left: 30.4%;
+      width: @width / @mobile * 100%;
+
+      @width: 190.6357;
+
+      &:active {
+        &::before {
+          background-position-y: 100%;
+        }
+      }
+
+      &::before {
+        padding-bottom: (unit(image-height(@img) / unit(image-width(@img))) * 50%);
+        background-image: url(@img);
+        background-position-y: 0%;
+
+        @img: './img/buttons/n-b-1.svg';
+      }
+
+      @apply cursor-pointer;
+    }
+
+    .c-3 {
+      top: 74.6%;
+      left: 63.5%;
+      width: @width / @mobile * 100%;
+
+      @width: 21.5447;
+
+      &::before {
+        padding-bottom: (unit(image-height(@img) / unit(image-width(@img))) * 100%);
+        background-image: url(@img);
+        transform-origin: center center;
+        animation: scaleXY_150 1s ease-in-out infinite;
+        animation-delay: 0s;
+
+        @img: './img/buttons/c-1.svg';
+      }
+
+      &::after {
+        bottom: 40.6%;
+        margin-left: -95.321489%;
+        padding-bottom: (unit(image-height(@img) / unit(image-width(@img))) * 100%);
+        width: @w / @width * 100%;
+        background-image: url(@img);
+        transform-origin: center center;
+        animation: visible_01 1s ease-in-out infinite;
+        animation-delay: 0s;
+
+        @w: 30.9972;
+        @offset: -4%;
+        @img: './img/buttons/c-1-f.svg';
+        @apply left-1/2 bg-contain;
+      }
+    }
+
+    .c-4 {
+      top: 92.5%;
       left: 68.7%;
       width: @width / @mobile * 100%;
 
@@ -333,8 +389,8 @@
       @apply cursor-pointer;
     }
 
-    .c-3 {
-      top: 85.1% + 0.9%;
+    .c-5 {
+      top: 93.6%;
       left: 68.7% + 14.5%;
       width: @width / @mobile * 100%;
 
@@ -367,88 +423,30 @@
       }
     }
 
-    .c-4 {
-      top: 91.7%;
-      left: 31.7%;
+    .c-6 {
+      top: 97.5%;
+      left: 20.8%;
       width: @width / @mobile * 100%;
 
-      @width: 225.2615;
+      @width: 325.7798;
 
-      @apply cursor-pointer;
-
-      &:active {
+      &:hover {
         &::before {
-          background-position-y: 100%;
-        }
-
-        &::after {
-          transform: scale(1.2);
-          transform-origin: right 60%;
+          @apply border-b-2 border-quinary;
         }
       }
 
       &::before {
-        padding-bottom: (unit(image-height(@img) / unit(image-width(@img))) * 50%);
-        background-image: url(@img);
-        background-position-y: 0%;
-
-        @img: './img/buttons/m-c-4.svg';
-      }
-
-      &::after {
-        bottom: -91.8%;
-        margin-left: -103.276292%;
         padding-bottom: (unit(image-height(@img) / unit(image-width(@img))) * 100%);
-        width: @w / @width * 100%;
         background-image: url(@img);
+        transition: 0.1s;
 
-        @w: 127.3912;
-        @offset: 10%;
-        @img: './img/buttons/c-4-f.svg';
-        @apply left-1/2 bg-contain;
+        @img: './img/buttons/contact.svg';
+
+        @apply bg-cover bg-center bg-no-repeat;
       }
-    }
-
-    .c-5 {
-      top: 95.3%;
-      left: 47.2%;
-      width: @width / @mobile * 100%;
-
-      @width: 235.5677;
 
       @apply cursor-pointer;
-
-      &:active {
-        &::before {
-          background-position-y: 100%;
-        }
-
-        &::after {
-          transform: scale(1.2);
-          transform-origin: right 60%;
-        }
-      }
-
-      &::before {
-        padding-bottom: (unit(image-height(@img) / unit(image-width(@img))) * 50%);
-        background-image: url(@img);
-        background-position-y: 0%;
-
-        @img: './img/buttons/c-5.svg';
-      }
-
-      &::after {
-        bottom: -38.6%;
-        margin-left: -100.139191%;
-        padding-bottom: (unit(image-height(@img) / unit(image-width(@img))) * 100%);
-        width: @w / @width * 100%;
-        background-image: url(@img);
-
-        @w: 127.3912;
-        @offset: -13%;
-        @img: './img/buttons/m-c-5-f.svg';
-        @apply left-1/2 bg-contain;
-      }
     }
   }
 }

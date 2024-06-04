@@ -9,15 +9,17 @@ const Buttons = memo(() => {
   return (
     <div className='Buttons'>
       <div className={twMerge(device >= MediaType.MD ? 'd' : 'm')}>
-        {[URLS.mommy, false, URLS.plan, false, URLS.comment, URLS.contact].map((u, index) => (
-          <div
-            key={`c${index}`}
-            className={`c-${index}`}
-            onClick={() => {
-              if (typeof u === 'string') window.open(u);
-            }}
-          />
-        ))}
+        {[URLS.detail, false, URLS.articles, false, URLS.plan, false, URLS.contact].map(
+          (u, index) => (
+            <div
+              key={`c${index}`}
+              className={`c-${index}`}
+              onClick={() => {
+                if (typeof u === 'string') window.open(u);
+              }}
+            />
+          ),
+        )}
       </div>
     </div>
   );

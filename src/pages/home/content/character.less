@@ -107,7 +107,7 @@
     }
 
     .c-4 {
-      top: 25.2%;
+      top: 26.2%;
       left: 12.3%;
       width: @width / @desktop * 100%;
 
@@ -143,7 +143,7 @@
     }
 
     .c-6 {
-      top: 23.9%;
+      top: 24.9%;
       left: 80.8%;
       width: @width / @desktop * 100%;
 
@@ -161,7 +161,7 @@
     }
 
     .c-7 {
-      top: 25%;
+      top: 26%;
       left: 72.8%;
       width: @width / @desktop * 100%;
 
@@ -179,7 +179,7 @@
     }
 
     .c-8 {
-      top: 25.2%;
+      top: 26.2%;
       left: 62.8%;
       width: @width / @desktop * 100%;
 
@@ -197,7 +197,7 @@
     }
 
     .c-9 {
-      top: 45.6%;
+      top: 48.6%;
       left: 70.9%;
       width: @width / @desktop * 100%;
 
@@ -215,8 +215,8 @@
     }
 
     .c-10 {
-      top: 49.2%;
-      left: 13.6%;
+      top: 52.2%;
+      left: 16.6%;
       width: @width / @desktop * 100%;
 
       @width: 87.7411;
@@ -233,8 +233,8 @@
     }
 
     .c-11 {
-      top: 49.4%;
-      left: 19.6%;
+      top: 52.5%;
+      left: 22.5%;
       width: @width / @desktop * 100%;
 
       @width: 97.4774;
@@ -251,8 +251,8 @@
     }
 
     .c-12 {
-      top: 49.4%;
-      left: 26.2%;
+      top: 52.4%;
+      left: 29.2%;
       width: @width / @desktop * 100%;
 
       @width: 77.7987;
@@ -269,8 +269,8 @@
     }
 
     .c-13 {
-      top: 57.8%;
-      left: 66.1%;
+      top: 62%;
+      left: 56.4%;
       width: @width / @desktop * 100%;
 
       @width: 204.4205;
@@ -287,8 +287,8 @@
     }
 
     .c-14 {
-      top: 66.8%;
-      left: 75.1%;
+      top: 69.8%;
+      left: 76.1%;
       width: @width / @desktop * 100%;
 
       @width: 423.7762;
@@ -302,8 +302,8 @@
     }
 
     .c-15 {
-      top: 64%;
-      left: 74.6%;
+      top: 67%;
+      left: 75.6%;
       width: @width / @desktop * 100%;
 
       @width: 335.4944;
@@ -335,7 +335,7 @@
     }
 
     .c-16 {
-      top: 69%;
+      top: 71%;
       left: 3.7%;
       width: @width / @desktop * 100%;
 
@@ -389,8 +389,8 @@
     }
 
     .c-19 {
-      top: 75.3%;
-      left: 28.2%;
+      top: 75.5%;
+      left: 24.2%;
       width: @width / @desktop * 100%;
 
       @width: 300.1159;
@@ -398,6 +398,9 @@
       &::before {
         padding-bottom: (unit(image-height(@img) / unit(image-width(@img))) * 100%);
         background-image: url(@img);
+        transform-origin: center bottom;
+        animation: walkX2 5s ease-in-out infinite;
+        animation-delay: -7s;
 
         @img: './img/character/c-19.svg';
       }
@@ -440,7 +443,7 @@
     }
 
     .c-1 {
-      top: 23.2%;
+      top: 26.2%;
       left: 71.8%;
       width: @width / @mobile * 100%;
 
@@ -458,7 +461,7 @@
     }
 
     .c-2 {
-      top: 23.3%;
+      top: 26.3%;
       left: 53.8%;
       width: @width / @mobile * 100%;
 
@@ -476,7 +479,7 @@
     }
 
     .c-3 {
-      top: 55.5%;
+      top: 62.9%;
       left: 3.4%;
       width: @width / @mobile * 100%;
 
@@ -494,7 +497,7 @@
     }
 
     .c-4 {
-      top: 55.7%;
+      top: 63.1%;
       left: 14.7%;
       width: @width / @mobile * 100%;
 
@@ -512,7 +515,7 @@
     }
 
     .c-5 {
-      top: 72.5%;
+      top: 78.5%;
       left: 9.7%;
       width: @width / @mobile * 100%;
 
@@ -527,7 +530,7 @@
     }
 
     .c-6 {
-      top: 70.6%;
+      top: 76.6%;
       left: 8.8%;
       width: @width / @mobile * 100%;
 
@@ -560,20 +563,20 @@
     }
 
     .c-7 {
-      top: 86.9%;
-      left: 63.6%;
+      top: 73.1%;
+      left: 58.7%;
       width: @width / @mobile * 100%;
 
-      @width: 178.8099;
+      @width: 122.0168;
 
       &::before {
         padding-bottom: (unit(image-height(@img) / unit(image-width(@img))) * 100%);
         background-image: url(@img);
-        transform-origin: right bottom;
-        animation: flap_3 7s ease-in-out infinite;
+        transform-origin: center bottom;
+        animation: flap_1 4s ease-in-out infinite;
         animation-delay: -1.5s;
 
-        @img: './img/character/m-c-7.svg';
+        @img: './img/character/m-c-6.svg';
       }
     }
   }

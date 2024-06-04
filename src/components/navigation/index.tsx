@@ -1,51 +1,36 @@
+import { URLS } from '@/settings/config';
 import { memo } from 'react';
 import './index.less';
-import { URLS } from '@/settings/config';
-
-const hashes = ['experience', 'purchase', 'mommy', 'plan', 'contact'];
+import Facebook from 'lesca-facebook-share';
+import Line from 'lesca-line-share';
 
 const Navigation = memo(() => (
   <div className='Navigation'>
     <div>
-      <button
-        className='logo'
-        onClick={() => {
-          window.location.hash = '';
-        }}
-      />
+      <div className='logo' />
     </div>
     <div>
-      <div className='hash'>
-        {hashes.map((name, index) => {
-          return (
-            <button
-              key={`btn${index}`}
-              onClick={() => {
-                window.location.hash = name;
-              }}
-            >
-              <div className={`btn-${index}`} />
-            </button>
-          );
-        })}
-      </div>
       <div className='social'>
         <button
           className='fb'
           onClick={() => {
-            window.open(URLS.facebook);
+            Facebook.share({
+              href: URLS.facebook,
+              method: 'share',
+            });
           }}
         />
         <button
           className='line'
           onClick={() => {
-            window.open(URLS.line);
+            const text = `${import.meta.env.VITE_TITLE} / ${import.meta.env.VITE_SUBSCRIPTION}`;
+            Line.share(URLS.line, text);
           }}
         />
         <button
           className='home'
           onClick={() => {
-            window.open(URLS.home);
+            window.scrollTo(0, 0);
           }}
         />
       </div>
