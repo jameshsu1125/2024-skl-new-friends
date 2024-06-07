@@ -3,6 +3,7 @@ import './buttons.less';
 import useMedia, { MediaType } from '@/hooks/useMedia';
 import { twMerge } from 'tailwind-merge';
 import { URLS } from '@/settings/config';
+import Gtag from 'lesca-gtag';
 
 const Buttons = memo(() => {
   const [device] = useMedia();
@@ -15,7 +16,10 @@ const Buttons = memo(() => {
               key={`c${index}`}
               className={`c-${index}`}
               onClick={() => {
-                if (typeof u === 'string') window.open(u);
+                if (typeof u !== 'boolean') {
+                  window.open(u.url);
+                  Gtag.event('首頁', u.title);
+                }
               }}
             />
           ),

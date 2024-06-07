@@ -6,10 +6,15 @@ import Content from './content';
 import './index.less';
 import Landing from './landing';
 import { ActionType } from '@/settings/type';
+import Gtag from 'lesca-gtag';
 
 const Home = memo(() => {
   const [, setContext] = useContext(Context);
   const [state, setState] = useState<THomeState>(HomeState);
+
+  useEffect(() => {
+    Gtag.pv('首頁');
+  }, []);
 
   useEffect(() => {
     if (state.step >= HomeStepType.loaded) {

@@ -4,11 +4,11 @@ import { PAGE } from '@/settings/config';
 import { Context, InitialState, Reducer } from '@/settings/constant';
 import '@/settings/global.less';
 import { ActionType, TContext } from '@/settings/type';
-import Facebook from 'lesca-facebook-share';
+import Gtag from 'lesca-gtag';
 import { Suspense, lazy, memo, useContext, useMemo, useReducer } from 'react';
 import ReactDOM from 'react-dom/client';
 
-Facebook.install(import.meta.env.VITE_FACEBOOK_ID);
+Gtag.install(import.meta.env.VITE_GA_ID);
 
 const Pages = memo(() => {
   const [context] = useContext(Context);

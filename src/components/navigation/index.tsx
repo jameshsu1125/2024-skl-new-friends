@@ -1,17 +1,19 @@
-import { URLS } from '@/settings/config';
 import { memo } from 'react';
 import './index.less';
-import Facebook from 'lesca-facebook-share';
-import Line from 'lesca-line-share';
 
 const Navigation = memo(() => (
   <div className='Navigation'>
     <div>
-      <div className='logo' />
+      <button
+        className='logo'
+        onClick={() => {
+          window.scrollTo(0, 0);
+        }}
+      />
     </div>
     <div>
       <div className='social'>
-        <button
+        {/* <button
           className='fb'
           onClick={() => {
             Facebook.share({
@@ -32,7 +34,7 @@ const Navigation = memo(() => (
           onClick={() => {
             window.scrollTo(0, 0);
           }}
-        />
+        /> */}
       </div>
     </div>
   </div>
